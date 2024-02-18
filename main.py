@@ -34,6 +34,7 @@ cleanHTML = re.compile('<.*?>')
 real = []
 
 def clean_text(text):
+    #real = []
     #Lowercase
     text = text.lower()
 
@@ -98,7 +99,9 @@ def treatment():
 
 while True:
     text = input("Hello I understand you're not doing well today, what seems to be the problem?\n")
-    if text == 'quit': break
+    if text == 'quit': 
+        real = []
+        break
     data = clean_text(text)
     print("Your symptoms appear to be: ", data)
     disease = findDisease()
