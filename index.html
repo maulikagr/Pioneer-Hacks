@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis Result</title>
+</head>
+<body>
+    <h2>Diagnosis Result</h2>
+
+    <p>Your symptoms appear to be: {{ input }}</p>
+
+    <p>You may have these illnesses: {{ diseases }}</p>
+
+    <h3>Treatment Information:</h3>
+    <ul>
+        {% for info in treatment_info %}
+            <li>{{ info }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
